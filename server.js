@@ -55,7 +55,7 @@ app.get('/logout', function(req, res) {
         }
     });
 });
-
-app.listen(3000, function() {
+app.enable('trust proxy');
+app.listen(3000, 127.0.0.1, function() {
     console.log("App strated on PORT 3000");
 });
